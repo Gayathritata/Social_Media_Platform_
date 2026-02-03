@@ -1,0 +1,153 @@
+/* Login.css */
+@import '../../Responsive/mediaQueries.css';
+
+.login-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #121212;
+  /* Dark theme background */
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Left components already defined in mediaQueries but specialized here */
+.left-pane {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-area img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.brand-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.brand-text p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Right Pane - Form Form */
+.right-pane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e1e;
+  /* Slightly lighter dark for form area */
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  text-align: left;
+  /* Ensure explicit left alignment for content within the box */
+}
+
+.auth-header h2 {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: left;
+  /* Explicitly align labels to the left */
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 4px rgba(100, 108, 255, 0.1);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #646cff 0%, #9bc5ff 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.4);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
+
+.auth-footer a {
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}

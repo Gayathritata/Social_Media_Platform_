@@ -1,0 +1,260 @@
+/* Releasing Bottle Animation */
+.throwing-bottle {
+    position: fixed;
+    width: 50px;
+    height: 80px;
+    border-radius: 10px 10px 50% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    pointer-events: none;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.bottle-cork {
+    position: absolute;
+    top: -8px;
+    width: 15px;
+    height: 10px;
+    background: #92400e;
+    border-radius: 4px;
+}
+
+.bottle-paper {
+    position: absolute;
+    width: 25px;
+    height: 40px;
+    background: #fefce8;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.ocean-ripple {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.ripples-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 100;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-5px);
+}
+
+.safe-harbor-container {
+    min-height: calc(100vh - 60px);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #0c4a6e, #1e3a8a);
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.ocean-background {
+    height: 60vh;
+    position: relative;
+    background: linear-gradient(to bottom, #0ea5e9, #0284c7);
+    overflow: hidden;
+}
+
+/* Wave Animations */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 120 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 28h120V12.5C105 10.5 90 20 75 20S45 5 30 5 0 20 0 20V28z" fill="rgba(255,255,255,0.2)"/></svg>');
+    background-size: 50% 100%;
+    animation: waveMove 10s linear infinite;
+}
+
+.wave2 {
+    height: 120px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 120 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 28h120V12.5C105 10.5 90 20 75 20S45 5 30 5 0 20 0 20V28z" fill="rgba(255,255,255,0.3)"/></svg>');
+    background-size: 50% 100%;
+    animation: waveMove 7s linear infinite reverse;
+    opacity: 0.5;
+}
+
+@keyframes waveMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Bottle Styles */
+.bottles-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bottle {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 50% 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 10;
+}
+
+.bottle:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.bottle-icon {
+    color: white;
+    margin-bottom: 4px;
+}
+
+.bottle-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Shore Content */
+.shore-content {
+    padding: 40px 20px;
+    background: #f8fafc;
+    color: #1e293b;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 40px 40px 0 0;
+    margin-top: -30px;
+    position: relative;
+    z-index: 20;
+}
+
+.shore-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.shore-header p {
+    max-width: 600px;
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.bottle-form {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bottle-form textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    resize: none;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.bottle-form textarea:focus {
+    outline: none;
+    border-color: #0ea5e9;
+}
+
+.release-btn {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.release-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+}
+
+.kindness-stats {
+    margin-top: 30px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #f1f5f9;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+}

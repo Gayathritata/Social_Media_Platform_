@@ -1,0 +1,204 @@
+.celebration-hall {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.hall-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-icon {
+    color: #f59e0b;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+.hall-header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.hall-header p {
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.milestone-input-area {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #f3f4f6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 60px;
+}
+
+.milestone-form {
+    display: flex;
+    gap: 15px;
+}
+
+.milestone-form input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 2px solid #f3f4f6;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.milestone-form input:focus {
+    outline: none;
+    border-color: #f59e0b;
+}
+
+.add-btn {
+    padding: 0 25px;
+    background: #f59e0b;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.add-btn:hover {
+    background: #d97706;
+}
+
+/* Timeline */
+.timeline-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #fee2e2;
+    border-radius: 2px;
+}
+
+.milestone-card-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 70px;
+}
+
+.milestone-dot {
+    position: absolute;
+    left: 17px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #f59e0b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    box-shadow: 0 0 0 5px white;
+}
+
+.milestone-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #f3f4f6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.milestone-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category {
+    color: #f59e0b;
+    background: #fef3c7;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.date {
+    color: #9ca3af;
+}
+
+.milestone-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f9fafb;
+    padding-top: 15px;
+}
+
+.celebrate-btn {
+    background: none;
+    border: 1.5px solid #f3f4f6;
+    padding: 6px 15px;
+    border-radius: 8px;
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.celebrate-btn:hover {
+    border-color: #f59e0b;
+    color: #f59e0b;
+    background: #fffbeb;
+}
+
+.likes {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ef4444;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

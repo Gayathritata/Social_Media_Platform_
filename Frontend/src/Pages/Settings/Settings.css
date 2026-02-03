@@ -1,0 +1,118 @@
+.settings-page {
+  max-width: 600px;
+  /* Slightly wider for modern feel */
+  margin: 0 auto;
+  padding: 40px 24px;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  min-height: 100vh;
+  border-radius: 20px;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.back-arrow {
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.back-arrow:hover {
+  transform: translateX(-3px);
+}
+
+.page-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e40af;
+  /* Deep Blue title */
+  text-align: left;
+}
+
+.section-title {
+  margin: 30px 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #3b82f6;
+  /* Blue section titles */
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  border-radius: 16px;
+  background-color: white;
+  margin-bottom: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.05);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(59, 130, 246, 0.1);
+  /* Subtle blue border */
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.card span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  /* Deep Charcoal */
+}
+
+.arrow {
+  font-size: 18px;
+  color: #adb5bd;
+}
+
+.logout {
+  margin-top: 40px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s;
+  box-shadow: 0 4px 6px rgba(220, 53, 69, 0.3);
+}
+
+.logout:hover {
+  background-color: #c82333;
+}
+
+.logout:active {
+  transform: scale(0.98);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

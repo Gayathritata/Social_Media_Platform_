@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+
+  /* Professional soft background */
+  background: linear-gradient(
+    135deg,
+    #4766cc,
+    #0ee962,
+    #b5db09
+  );
+}

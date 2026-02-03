@@ -1,0 +1,241 @@
+.create-post-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
+}
+
+.create-post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 20px;
+}
+
+.create-post-header h2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.back-btn {
+    background: #f8fafc;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748b;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.post-submit-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-submit-btn:hover:not(.disabled) {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+.post-submit-btn.disabled {
+    background: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.create-post-content {
+    padding: 10px 0;
+}
+
+.user-mini-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #f1f5f9;
+}
+
+.username {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    border: none;
+    font-size: 18px;
+    color: #1e293b;
+    font-family: inherit;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+.image-preview-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.image-preview {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.remove-img-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+}
+
+.remove-img-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.create-post-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.footer-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #f8fafc;
+    border-radius: 50px;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.action-item:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.icon-image {
+    color: #22c55e;
+}
+
+.icon-location {
+    color: #f43f5e;
+}
+
+.icon-emoji {
+    color: #f59e0b;
+}
+
+.content-limit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.limit-ring {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: conic-gradient(#3b82f6 var(--progress), #f1f5f9 0);
+    position: relative;
+}
+
+.limit-ring::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: white;
+    border-radius: 50%;
+}
+
+.limit-ring.warning {
+    background: conic-gradient(#f43f5e var(--progress), #f1f5f9 0);
+}
+
+.content-limit span {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .create-post-container {
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+        height: 100vh;
+    }
+
+    .footer-actions span {
+        display: none;
+    }
+}

@@ -1,0 +1,215 @@
+.synergy-quests-container {
+    display: flex;
+    min-height: calc(100vh - 60px);
+    background-color: #020617;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+}
+
+.quest-sidebar {
+    width: 250px;
+    background: #0f172a;
+    padding: 30px 20px;
+    border-right: 1px solid #1e293b;
+}
+
+.community-iq-card {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.card-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.iq-value {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.iq-trend {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.quest-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-item {
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.nav-item.active {
+    background: #1e293b;
+    color: white;
+    border-left: 4px solid #3b82f6;
+}
+
+/* Main Content */
+.quest-main {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.quest-id {
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.quest-header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.quest-header p {
+    color: #94a3b8;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.puzzle-section {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    padding: 40px;
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.puzzle-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+}
+
+.riddle-box {
+    margin-bottom: 40px;
+}
+
+.riddle-text {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.clues {
+    display: flex;
+    gap: 15px;
+}
+
+.clue {
+    background: #334155;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.answer-form {
+    display: flex;
+    gap: 15px;
+}
+
+.answer-form input {
+    flex: 1;
+    background: #1e293b;
+    border: 2px solid #334155;
+    padding: 16px 25px;
+    border-radius: 16px;
+    color: white;
+    font-size: 18px;
+}
+
+.answer-form input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #0f172a;
+}
+
+.answer-form button {
+    padding: 0 30px;
+    background: #3b82f6;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.success-badge {
+    text-align: center;
+    padding: 20px;
+}
+
+.success-badge h3 {
+    font-size: 24px;
+    color: #22c55e;
+    margin: 10px 0;
+}
+
+.quest-stats {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.mini-stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .synergy-quests-container {
+        flex-direction: column;
+    }
+
+    .quest-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    .quest-main {
+        padding: 30px;
+    }
+
+    .answer-form {
+        flex-direction: column;
+    }
+}

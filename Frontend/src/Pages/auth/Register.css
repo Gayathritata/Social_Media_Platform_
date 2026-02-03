@@ -1,0 +1,164 @@
+/* Register.css */
+@import '../../Responsive/mediaQueries.css';
+
+/* Reuse structure from Login but can customize specific Register needs here */
+.register-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #121212;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-pane {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure video covers */
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.brand-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.right-pane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e1e1e;
+    overflow-y: auto;
+    /* Allow scrolling for long register form */
+}
+
+/* Register box might need to be taller or handle scrolling */
+.auth-box {
+    width: 100%;
+    max-width: 500px;
+    /* Slightly wider for register */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    max-height: 90vh;
+    /* Prevent it from being taller than screen */
+    overflow-y: auto;
+    text-align: left;
+    /* Ensure explicit left alignment for content within the box */
+}
+
+/* Hide scrollbar for auth box */
+.auth-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.auth-box::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
+
+.auth-header h2 {
+    text-align: center !important;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+    font-size: 0.9rem;
+    text-align: left;
+    /* Explicitly align labels to the left */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    /* Slightly smaller padding to fit more fields */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #646cff;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #646cff 0%, #9bc5ff 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.d-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #666;
+    color: #ccc;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 15px;
+    color: #888;
+}
+
+.auth-footer a {
+    color: #646cff;
+    text-decoration: none;
+}
