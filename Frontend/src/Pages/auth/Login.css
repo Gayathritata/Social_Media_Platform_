@@ -103,18 +103,36 @@
 .form-control {
   width: 100%;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #ffffff !important;
+  /* Solid white background for maximum visibility */
+  border: 1px solid #646cff;
   border-radius: 8px;
-  color: white;
+  color: #000000 !important;
+  /* Solid black text */
   font-size: 1rem;
+  font-weight: 500;
   transition: 0.3s;
+  text-align: left !important;
+}
+
+.form-control::placeholder {
+  color: #888888;
 }
 
 .form-control:focus {
   outline: none;
-  border-color: #646cff;
-  box-shadow: 0 0 0 4px rgba(100, 108, 255, 0.1);
+  border-color: #4b51d1;
+  box-shadow: 0 0 0 4px rgba(100, 108, 255, 0.2);
+  background: #ffffff !important;
+}
+
+/* Fix autofill visibility for white background */
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000000 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .btn-primary {

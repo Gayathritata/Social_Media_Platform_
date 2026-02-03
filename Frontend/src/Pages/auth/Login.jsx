@@ -11,12 +11,13 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Simple validation (can be removed if testing)
-    if (emailRef.current.value && passwordRef.current.value) {
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    if (email && password) {
       navigate("/AppLayout");
     } else {
-      navigate("/AppLayout"); // Fallback for now based on user action, or alert
-      // alert("Please enter both email and password.");
+      alert("Please enter both email and password.");
     }
   }
 
